@@ -2,6 +2,13 @@ $(document).ready(function () {
 
     var resumeArray = {
         personalDetailsObj: {
+            name: "Ajay Kumar Verma",
+            description: "To work in an organization where I can efficiently contribute my analytical &amp; technical skills to the growth of the organization and build my professional career.",
+            phone: "+91 9888777192",
+            email: "ajay.verma1953@gmail.com",
+            skype: "",
+            whatsapp: "+91 9888777192",
+            location: "Chandigarh",
             dob: "15-08-1992",
             languages_known: ["English", "Hindi"],
             gender: "Male",
@@ -175,6 +182,7 @@ $(document).ready(function () {
     });
 
     $('#personalDetailsId').empty();
+    $('#contactDetailId').empty();
     $(Object.keys(resumeArray.personalDetailsObj)).each(function (i, item) {
         if (item == 'dob') {
             $('#personalDetailsId').append('<div class="personal-detail">Date of Birth: <span class="r-float">' + resumeArray.personalDetailsObj[item] + '</span></div>');
@@ -192,6 +200,27 @@ $(document).ready(function () {
             $('#personalDetailsId').append('<div class="personal-detail">Gender: <span class="r-float">' + resumeArray.personalDetailsObj[item] + '</span></div>');
         } else if (item == 'marital_status') {
             $('#personalDetailsId').append('<div class="personal-detail">Marital status: <span class="r-float">' + resumeArray.personalDetailsObj[item] + '</span></div>');
+        } else if (item == 'name') {
+            $('.username').html(resumeArray.personalDetailsObj[item]);
+        } else if (item == 'description') {
+            $('.description').html(resumeArray.personalDetailsObj[item]);
+        } else {
+
+            var faIcon = {
+                email: "envelope",
+                phone: "phone",
+                location: "map-marker",
+                whatsapp: "whatsapp",
+                skype: "skype",
+            };
+            var icon = faIcon[item];
+            var contact = `<div class="contact-detail col-xs-12">
+                ${resumeArray.personalDetailsObj[item]}<i class="fa fa-${icon}"></i>
+            </div>`;
+
+            if (resumeArray.personalDetailsObj[item])
+                $('#contactDetailId').append(contact);
+
         }
     });
 
