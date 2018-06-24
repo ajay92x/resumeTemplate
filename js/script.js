@@ -7,7 +7,7 @@ $(document).ready(function () {
             gender: "Male",
             marital_status: "Single"
         },
-        interestArr: ["Watching TV Series &amp; AnimeX", "Reading", "Travelling"],
+        interestArr: ["Watching TV Series &amp; Anime", "Reading", "Travelling"],
         technologiesArr: ["Facebook SDK", "Google SDK", "Instagram SDK", "Vuforia SDK", "Google walkthrough", "Tokbox SDK", "Amazon Alexa", "SAAS"],
         trainingArr: [{
                 duration: "6 weeks",
