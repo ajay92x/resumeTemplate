@@ -1,2 +1,1 @@
-
-window.onload = alert("Hello World");
+alert("Hello World");
