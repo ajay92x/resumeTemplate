@@ -6181,7 +6181,7 @@ a.thumbnail:hover {
 }
 
 .progress-bar-success {
-    background-color: #5cb85c
+    background-color: #5cb85c !important;
 }
 
 .progress-striped .progress-bar-success {
@@ -6211,7 +6211,7 @@ a.thumbnail:hover {
 }
 
 .progress-bar-danger {
-    background-color: #d9534f
+    background-color: #d9534f !important;
 }
 
 .progress-striped .progress-bar-danger {

@@ -24,6 +24,13 @@
         <?php include_once('css/font-awesome.min.css');?>
         <?php include_once('css/bootstrap.min.css');?>
         <?php include_once('css/templateOne.css');?>
+
+       /*  @media print {
+            .progress-bar-success {
+                -webkit-print-color-adjust: exact; 
+            }
+        } */
+
     </style>
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -33,7 +40,6 @@
 </head>
 
 <body>
-
 
     <div class="header container padding-null">
         <div class="left-element col-xs-6 l-padding-null">
@@ -90,6 +96,8 @@
                             up-to-date information about the employees housing condition.</span>
                     </div>
                 </li>
+                <div class="clearfix"></div>
+            <br /><br /><br /><br /><br /><br />
                 <li class="list-group-item">
                     <div class="duration"><span>02/2016 - 05/2018</span><span class="r-float">Mohali</span></div>
                     <span class="position">Software Developer</span>
@@ -153,6 +161,8 @@
                 <ul id="trainingId" class="list-group"></ul>
             </div>
 
+            <div class="clearfix"></div>
+            <br /><br /><br /><br /><br /><br />
             <div class="col-xs-12 education padding-null">
                 <h1 class="title">Education</h1>
                 <ul id="educationId" class="list-group"></ul>
