@@ -214,7 +214,7 @@ $(document).ready(function () {
                 skype: "skype",
             };
             var icon = faIcon[item];
-            var contact = `<div class="contact-detail col-xs-12">
+            var contact = `<div class="contact-detail col-xs-12 r-padding-null">
                 ${resumeArray.personalDetailsObj[item]}<i class="fa fa-${icon}"></i>
             </div>`;
 
