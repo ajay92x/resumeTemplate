@@ -25,11 +25,11 @@
         <?php include_once('css/bootstrap.min.css');?>
         <?php include_once('css/templateOne.css');?>
 
-       /*  @media print {
+        @media print {
             .progress-bar-success {
                 -webkit-print-color-adjust: exact; 
             }
-        } */
+        }
 
     </style>
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -60,7 +60,7 @@
             <h1 class="title">Work Experience</h1>
             <ul class="list-group">
                 <li class="list-group-item">
-                    <div class="duration"><span>09/2018 - 02/2019</span><span class="r-float">Mohali</span></div>
+                    <div class="duration"><span>09/2018 - 02/2019</span><span class="r-float">Chandigarh</span></div>
                     <span class="position">Front End Developer</span>
                     <span class="company">Next57</span>
                     <span class="role"><b>Role -</b> Front End Developer, QA Tester</span>

@@ -38,7 +38,7 @@ $(document).ready(function () {
                 name: "Ionic",
                 rating: 80
                     }, {
-                name: "AngularJS",
+                name: "Angular 2+",
                 rating: 70
                     }, {
                 name: "JavaScript",
@@ -55,10 +55,10 @@ $(document).ready(function () {
                     }, {
                 name: "Sass",
                 rating: 90
-                    }, {
+                    }, /* {
                 name: "NodeJS",
                 rating: 50
-                    }, {
+                    }, */ {
                 name: "MongoDB",
                 rating: 40
                     }]
