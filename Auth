@@ -1,0 +1,66 @@
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CanActivate, Router, RouterStateSnapshot, ActivatedRouteSnapshot, CanDeactivate } from '@angular/router';
+import { ApiService } from './api.service';
+import { VariablesService } from './variables.service';
+
+@Injectable()
+export class AuthGuardService implements CanActivate {
+
+  constructor(public router: Router, public api: ApiService, public vs: VariablesService) { }
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+
+    this.api.tokenVerify();
+
+    // console.log("AuthGuardService:", localStorage.getItem('payment_verified'));
+    
+    if (localStorage.getItem('accessToken') && localStorage.getItem('payment_verified') == 'true') {
+      this.api.accessToken = localStorage.getItem('accessToken');
+      return true;
+    } else if (localStorage.getItem('accessToken')) {
+      this.router.navigate(['/subscription']);
+      return true;
+    } else {
+      this.router.navigate(['/login']);
+      return false;
+    }
+  }
+
+}
+
+@Injectable()
+export class GuardService implements CanActivate {
+
+  constructor(public router: Router, public api: ApiService, public vs: VariablesService) { }
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    this.api.tokenVerify();
+
+    // console.log("GuardService:", localStorage.getItem('payment_verified'));
+
+    if (localStorage.getItem('accessToken') && localStorage.getItem('payment_verified') == 'true') {
+      this.router.navigate(['/dashboard']);
+      return true;
+    } else {
+      return true;
+    }
+  }
+
+}
+
+// in navigation guard
+/* @Injectable()
+export class NavigationGuard implements CanDeactivate<any> {
+  constructor(private api: ApiService) {}
+  canDeactivate(component: any) {
+    // will prevent user from going back
+    if (this.api.isBackbuttonClicked) {
+      this.api.isBackbuttonClicked = false;
+      // push current state again to prevent further attempts.
+      history.pushState(null, null, location.href);
+      return false;
+    }
+    return true;
+  }
+} */
