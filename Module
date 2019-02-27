@@ -1,0 +1,140 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PasswordResetComponent } from './password-reset/password-reset.component';
+import { ErrorComponent } from './error/error.component';
+import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CommonService, SnackbarComponent } from './common.service';
+import { APP_BASE_HREF } from '@angular/common';
+import { SideNavComponent } from './side-nav/side-nav.component';
+
+import { AuthGuardService, GuardService } from './auth.guard-services';
+
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { CampaignComponent } from './campaign/campaign.component';
+import { GetStartedComponent } from './get-started/get-started.component';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { HttpClientModule } from '@angular/common/http';
+import { ColorPickerModule } from 'ngx-color-picker';
+// import {ColorPickerModule} from 'angular4-color-picker';
+import { WidgetComponent } from './campaign-templates/widget/widget.component';
+import { VisitorCountComponent } from './campaign-templates/visitor-count/visitor-count.component';
+import { MatRadioModule, MatProgressSpinnerModule, MatTableModule, MatButtonToggleModule, MatDialogModule, MatTooltipModule, MatCardModule, MatButtonModule, MatChipsModule, MatIconModule, MatMenuModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatStepperModule, MatSlideToggleModule, MatCheckboxModule, MatSelectModule, MatSnackBarModule, MatToolbarModule } from '@angular/material';
+import { CampaignsComponent } from './campaigns/campaigns.component';
+import { CampaignEditComponent } from './campaign-edit/campaign-edit.component';
+import { MorselComponent } from './morsel/morsel.component';
+import { HomeComponent } from './home/home.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { ProfileComponent } from './profile/profile.component';
+// import { CarouselModule } from "angular2-carousel";
+// import { MatColorPickerModule } from 'mat-color-picker';
+import { NgxPayPalModule } from 'ngx-paypal';
+import { ChartModule } from 'angular-highcharts';
+import { AnalyticsComponent } from './analytics/analytics.component';
+import { ReviewComponent } from './review/review.component';
+import { StarRatingModule } from 'angular-star-rating';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { SubscriptionComponent } from './subscription/subscription.component';
+
+const appRoutes: Routes = [
+  /*  {
+     path: '',
+     redirectTo: "/dashboard",
+     pathMatch: 'full'
+   }, */
+  { path: '', component: DashboardComponent, canActivate: [AuthGuardService] },
+  // { path: 'home', component: HomeComponent, canActivate: [GuardService] },
+  { path: 'login', component: LoginComponent, canActivate: [GuardService] },
+  { path: 'register', component: RegisterComponent, canActivate: [GuardService] },
+  { path: 'reset', component: PasswordResetComponent, canActivate: [GuardService] },
+  { path: 'error', component: ErrorComponent, canActivate: [GuardService] },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuardService] },
+  { path: 'success', component: DashboardComponent, canActivate: [AuthGuardService] },
+  { path: 'cancel', component: DashboardComponent, canActivate: [AuthGuardService] },
+  { path: 'subscription', component: SubscriptionComponent, canActivate: [GuardService] },
+  { path: '**', redirectTo: '/error' }
+];
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    PasswordResetComponent,
+    ErrorComponent,
+    DashboardComponent,
+    SideNavComponent,
+    CampaignComponent,
+    GetStartedComponent,
+    WidgetComponent,
+    VisitorCountComponent,
+    CampaignsComponent,
+    CampaignEditComponent,
+    SnackbarComponent,
+    MorselComponent,
+    HomeComponent,
+    DialogComponent,
+    ProfileComponent,
+    AnalyticsComponent,
+    ReviewComponent,
+    SubscriptionComponent,
+  ],
+  imports: [
+    NgxSpinnerModule,
+    StarRatingModule.forRoot(),
+    ChartModule,
+    NgxPayPalModule,
+    ColorPickerModule,
+    // MatColorPickerModule,
+    HttpClientModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: false } // <-- debugging purposes only
+    ),
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot(),
+    CollapseModule.forRoot(),
+    TabsModule.forRoot(),
+    MatCardModule,
+    MatButtonModule,
+    MatChipsModule,
+    MatMenuModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatStepperModule,
+    MatSlideToggleModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    // CarouselModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatDialogModule,
+    MatButtonToggleModule,
+    MatTableModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+  ],
+  providers: [CommonService, AuthGuardService, GuardService, { provide: APP_BASE_HREF, useValue: '/' }],
+  bootstrap: [AppComponent],
+  exports: [BsDropdownModule, TooltipModule, ModalModule, MatIconModule],
+  entryComponents:[SnackbarComponent, DialogComponent]
+})
+export class AppModule { }
