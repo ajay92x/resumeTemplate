@@ -67,6 +67,48 @@ let projectJSON = [
     "img": "img/portfolio/royal-enfield.png",
     "isLink": true
 }, {
+    "href": "http://tagzie.com/",
+    "title": "Tagzie",
+    "type": "Mobile Application",
+    "img": "img/portfolio/tagzie.jpeg",
+    "isLink": true
+}, {
+    "href": "https://play.google.com/store/apps/details?id=com.intervuelive&hl=en_IN",
+    "title": "IntervueLive",
+    "type": "Mobile Application",
+    "img": "img/portfolio/intervuelive.png",
+    "isLink": true
+}, {
+    "href": "https://play.google.com/store/apps/details?id=com.talktosanta&hl=en_IN",
+    "title": "Talk to Santa",
+    "type": "Mobile Application",
+    "img": "img/portfolio/talktosanta.png",
+    "isLink": true
+}, {
+    "href": "img/portfolio/caterpillar.png",
+    "title": "Caterpillar",
+    "type": "Mobile Application",
+    "img": "img/portfolio/caterpillar.png",
+    "isLink": false
+}, {
+    "href": "https://play.google.com/store/apps/details?id=com.defeatmsa.brainsupporthub&hl=en_IN",
+    "title": "GOSH:Global Online Support Hub",
+    "type": "Mobile Application",
+    "img": "img/portfolio/gosh.png",
+    "isLink": true
+}, {
+    "href": "img/portfolio/kliggit.jpg",
+    "title": "Kliggit",
+    "type": "Mobile Application",
+    "img": "img/portfolio/kliggit.jpg",
+    "isLink": false
+}, {
+    "href": "img/portfolio/birdieball.webp",
+    "title": "Birdieball",
+    "type": "Mobile Application",
+    "img": "img/portfolio/birdieball.webp",
+    "isLink": false
+}, {
     "href": "https://play.google.com/store/apps/details?id=com.carsake.innovativehonda",
     "title": "Innovative Honda",
     "type": "Mobile Application",
@@ -155,48 +197,6 @@ let projectJSON = [
     "title": "Bikerz Yamaha",
     "type": "Mobile Application",
     "img": "img/portfolio/yamaha.jpg",
-    "isLink": false
-}, {
-    "href": "http://tagzie.com/",
-    "title": "Tagzie",
-    "type": "Mobile Application",
-    "img": "img/portfolio/tagzie.jpeg",
-    "isLink": true
-}, {
-    "href": "https://play.google.com/store/apps/details?id=com.intervuelive&hl=en_IN",
-    "title": "IntervueLive",
-    "type": "Mobile Application",
-    "img": "img/portfolio/intervuelive.png",
-    "isLink": true
-}, {
-    "href": "https://play.google.com/store/apps/details?id=com.talktosanta&hl=en_IN",
-    "title": "Talk to Santa",
-    "type": "Mobile Application",
-    "img": "img/portfolio/talktosanta.png",
-    "isLink": true
-}, {
-    "href": "img/portfolio/caterpillar.png",
-    "title": "Caterpillar",
-    "type": "Mobile Application",
-    "img": "img/portfolio/caterpillar.png",
-    "isLink": false
-}, {
-    "href": "https://play.google.com/store/apps/details?id=com.defeatmsa.brainsupporthub&hl=en_IN",
-    "title": "GOSH:Global Online Support Hub",
-    "type": "Mobile Application",
-    "img": "img/portfolio/gosh.png",
-    "isLink": true
-}, {
-    "href": "img/portfolio/kliggit.jpg",
-    "title": "Kliggit",
-    "type": "Mobile Application",
-    "img": "img/portfolio/kliggit.jpg",
-    "isLink": false
-}, {
-    "href": "img/portfolio/birdieball.webp",
-    "title": "Birdieball",
-    "type": "Mobile Application",
-    "img": "img/portfolio/birdieball.webp",
     "isLink": false
 }]
 
