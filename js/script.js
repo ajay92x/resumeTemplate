@@ -215,7 +215,8 @@ $(document).ready(function () {
             };
             var icon = faIcon[item];
             var contact = `<div class="contact-detail col-xs-12 r-padding-null">
-                ${resumeArray.personalDetailsObj[item]}<i class="fa fa-${icon}"></i>
+                <span>${resumeArray.personalDetailsObj[item]}</span>
+                <i class="fa fa-${icon}"></i>
             </div>`;
 
             if (resumeArray.personalDetailsObj[item])
